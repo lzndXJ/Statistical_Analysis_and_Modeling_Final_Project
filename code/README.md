@@ -11,3 +11,30 @@
 组长向原型负责人交接图表、模型评估、优化效果对比和预测结果。预测结果按**预测目标日期、口岸和方向**对齐，包含预计人次、高客流概率以及所用预警门槛下的判断。例如，10 月 3 日 18:00 做出的次日预测，目标日期为 10 月 4 日。待结果齐备后一起确认原型的页面、演示案例和运行方式。
 
 脚本和原型用仓库内的相对路径读取项目文件。数据接口见[数据说明](../data/README.md)。
+
+## 客流数据（Issue #1）
+
+使用 Python 3.10 或更新版本，全部脚本仅依赖标准库，无需安装第三方包。在仓库根目录运行：
+
+```bash
+# 使用已提交的官方快照离线重建清洗 CSV 和机器核验结果
+python code/clean_passenger.py
+
+# 只核对，不联网、不改写文件；不一致时退出码为 1
+python code/clean_passenger.py --check
+
+# 质量规则回归测试：缺报、重复、非法人次、日期、分项加总等
+python -m unittest discover -s code -p "test_*.py" -v
+
+# 仅在需要更新来源时运行：联网下载、核验后替换快照并重建
+python code/clean_passenger.py --download
+
+# 可选：联网重取四份官方历史快照，更新发布时间的样本证据
+python code/probe_passenger_release.py
+```
+
+`clean_passenger.py` 从 `data/raw/` 读取原表及来源记录，生成 `data/passenger_daily.csv` 和 `data/passenger_audit.json`。原表按 `DD-MM-YYYY` 解析，只接受指定三个口岸和两个方向。原表末尾的空列经验证为空后移除；发现缺报、重复、非法人次或分项加总不一致时，在终端列出异常并终止，不填零、不静默去重，不覆盖已有清洗交付。官方原值为零时保留并在核验结果列出。
+
+`--check` 验证原始 CSV 的 SHA-256、字节数、来源 URL，再逐字节比较生成的清洗表及核验 JSON。它不会重新访问官方网站；更新官方版本后，必须重新审阅核验说明、极值和文件大小。`probe_passenger_release.py` 的归档时间仅用于有限样本的可得性核查，不作为固定发布时间保证。
+
+假期表可用 `python code/build_holidays.py --check` 单独检查。Issue #1 合并后再从最新 `main` 创建 Issue #3 的合表分支。

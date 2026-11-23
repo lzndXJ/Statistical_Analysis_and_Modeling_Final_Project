@@ -1,0 +1,12 @@
+{
+  "source_url": "https://www.immd.gov.hk/opendata/eng/transport/immigration_clearance/statistics_on_daily_passenger_traffic.csv",
+  "resolved_url": "https://www.immd.gov.hk/opendata/eng/transport/immigration_clearance/statistics_on_daily_passenger_traffic.csv",
+  "downloaded_at_hkt": "2026-11-23T21:18:56+08:00",
+  "http_date": "Mon, 23 Nov 2026 13:18:55 GMT",
+  "http_last_modified": "Mon, 23 Nov 2026 04:39:10 GMT",
+  "http_etag": null,
+  "content_type": "text/csv",
+  "raw_bytes": 3434609,
+  "raw_sha256": "ee110e4b5887e2b5f1dd7ad71e620ddbb90a01919578837828ae714ad123c79c",
+  "snapshot_bytes": 610208
+}

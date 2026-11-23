@@ -1,0 +1,95 @@
+{
+  "source_sha256": "ee110e4b5887e2b5f1dd7ad71e620ddbb90a01919578837828ae714ad123c79c",
+  "raw_rows": 63678,
+  "raw_first_date": "2021-01-01",
+  "raw_last_date": "2026-11-22",
+  "excluded_outside_date_range": 34272,
+  "excluded_other_control_points_in_range": 23196,
+  "selected_raw_rows": 6210,
+  "start_date": "2024-01-01",
+  "end_date": "2026-10-31",
+  "expected_days": 1035,
+  "actual_days": 1035,
+  "expected_rows": 6210,
+  "actual_rows": 6210,
+  "duplicate_keys": 0,
+  "missing_keys": [],
+  "invalid_count_rows": 0,
+  "total_mismatch_rows": 0,
+  "zero_counts": {
+    "hong_kong_residents": 0,
+    "mainland_visitors": 0,
+    "other_visitors": 0,
+    "passengers": 0
+  },
+  "zero_total_keys": [],
+  "rows_by_year": {
+    "2024": 2196,
+    "2025": 2190,
+    "2026": 1824
+  },
+  "groups": [
+    {
+      "control_point": "Lo Wu",
+      "direction": "arrival",
+      "rows": 1035,
+      "first_date": "2024-01-01",
+      "last_date": "2026-10-31",
+      "passengers_sum": 96958880,
+      "passengers_min": 7153,
+      "passengers_max": 179271
+    },
+    {
+      "control_point": "Lo Wu",
+      "direction": "departure",
+      "rows": 1035,
+      "first_date": "2024-01-01",
+      "last_date": "2026-10-31",
+      "passengers_sum": 99867040,
+      "passengers_min": 2741,
+      "passengers_max": 170603
+    },
+    {
+      "control_point": "Lok Ma Chau Spur Line",
+      "direction": "arrival",
+      "rows": 1035,
+      "first_date": "2024-01-01",
+      "last_date": "2026-10-31",
+      "passengers_sum": 82298485,
+      "passengers_min": 5523,
+      "passengers_max": 145807
+    },
+    {
+      "control_point": "Lok Ma Chau Spur Line",
+      "direction": "departure",
+      "rows": 1035,
+      "first_date": "2024-01-01",
+      "last_date": "2026-10-31",
+      "passengers_sum": 84464010,
+      "passengers_min": 2022,
+      "passengers_max": 157298
+    },
+    {
+      "control_point": "Shenzhen Bay",
+      "direction": "arrival",
+      "rows": 1035,
+      "first_date": "2024-01-01",
+      "last_date": "2026-10-31",
+      "passengers_sum": 61560631,
+      "passengers_min": 3708,
+      "passengers_max": 140103
+    },
+    {
+      "control_point": "Shenzhen Bay",
+      "direction": "departure",
+      "rows": 1035,
+      "first_date": "2024-01-01",
+      "last_date": "2026-10-31",
+      "passengers_sum": 60382952,
+      "passengers_min": 881,
+      "passengers_max": 129011
+    }
+  ],
+  "output_bytes": 348893,
+  "output_sha256": "efbe121fefbb7d2f985d3543cc1ea2a353a83b3194ec29b667c152e8c53a8cab"
+}

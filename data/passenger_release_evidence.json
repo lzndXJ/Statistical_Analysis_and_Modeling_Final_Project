@@ -1,0 +1,267 @@
+{
+  "retrieved_at_hkt": "2026-11-23T21:18:57+08:00",
+  "api_documentation_url": "https://data.gov.hk/en/help/api-spec",
+  "archive_timezone": "GMT+8 (as stated in API documentation)",
+  "list_url": "https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fwww.immd.gov.hk%2Fopendata%2Feng%2Ftransport%2Fimmigration_clearance%2Fstatistics_on_daily_passenger_traffic.csv&start=20261001&end=20261004",
+  "archive_timestamps": [
+    "20261001-1046",
+    "20261002-1045",
+    "20261003-1041",
+    "20261004-1020"
+  ],
+  "interpretation": "Archive collection time is not guaranteed first publication time.",
+  "samples": [
+    {
+      "archive_timestamp_hkt": "20261001-1046",
+      "archive_url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Fwww.immd.gov.hk%2Fopendata%2Feng%2Ftransport%2Fimmigration_clearance%2Fstatistics_on_daily_passenger_traffic.csv&time=20261001-1046",
+      "raw_bytes": 3348679,
+      "raw_sha256": "0b2dd7c0f9aeb3eda035041b59a71153b8de000acf6a8820981df02ff0c581c9",
+      "latest_observation_date": "2026-09-30",
+      "latest_target_rows": [
+        {
+          "Date": "30-09-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "77553",
+          "Mainland Visitors": "16107",
+          "Other Visitors": "817",
+          "Total": "94477"
+        },
+        {
+          "Date": "30-09-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "94834",
+          "Mainland Visitors": "16067",
+          "Other Visitors": "695",
+          "Total": "111596"
+        },
+        {
+          "Date": "30-09-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "58984",
+          "Mainland Visitors": "21301",
+          "Other Visitors": "570",
+          "Total": "80855"
+        },
+        {
+          "Date": "30-09-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "69292",
+          "Mainland Visitors": "17189",
+          "Other Visitors": "360",
+          "Total": "86841"
+        },
+        {
+          "Date": "30-09-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "45818",
+          "Mainland Visitors": "25832",
+          "Other Visitors": "2102",
+          "Total": "73752"
+        },
+        {
+          "Date": "30-09-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "50551",
+          "Mainland Visitors": "13071",
+          "Other Visitors": "938",
+          "Total": "64560"
+        }
+      ]
+    },
+    {
+      "archive_timestamp_hkt": "20261002-1045",
+      "archive_url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Fwww.immd.gov.hk%2Fopendata%2Feng%2Ftransport%2Fimmigration_clearance%2Fstatistics_on_daily_passenger_traffic.csv&time=20261002-1045",
+      "raw_bytes": 3350300,
+      "raw_sha256": "8fc72fd3f68c7a4aa63b5b691a35300de0f1fd411ffc249f6ea935ea4626a350",
+      "latest_observation_date": "2026-10-01",
+      "latest_target_rows": [
+        {
+          "Date": "01-10-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "67081",
+          "Mainland Visitors": "41970",
+          "Other Visitors": "796",
+          "Total": "109847"
+        },
+        {
+          "Date": "01-10-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "60188",
+          "Mainland Visitors": "51906",
+          "Other Visitors": "771",
+          "Total": "112865"
+        },
+        {
+          "Date": "01-10-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "50014",
+          "Mainland Visitors": "64877",
+          "Other Visitors": "739",
+          "Total": "115630"
+        },
+        {
+          "Date": "01-10-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "43977",
+          "Mainland Visitors": "41702",
+          "Other Visitors": "428",
+          "Total": "86107"
+        },
+        {
+          "Date": "01-10-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "40319",
+          "Mainland Visitors": "46174",
+          "Other Visitors": "1870",
+          "Total": "88363"
+        },
+        {
+          "Date": "01-10-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "33898",
+          "Mainland Visitors": "24185",
+          "Other Visitors": "903",
+          "Total": "58986"
+        }
+      ]
+    },
+    {
+      "archive_timestamp_hkt": "20261003-1041",
+      "archive_url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Fwww.immd.gov.hk%2Fopendata%2Feng%2Ftransport%2Fimmigration_clearance%2Fstatistics_on_daily_passenger_traffic.csv&time=20261003-1041",
+      "raw_bytes": 3351925,
+      "raw_sha256": "b4978742d577b1ef4665d32749241ffcd86b95202505414e5600f2544890cc32",
+      "latest_observation_date": "2026-10-02",
+      "latest_target_rows": [
+        {
+          "Date": "02-10-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "64236",
+          "Mainland Visitors": "34273",
+          "Other Visitors": "802",
+          "Total": "99311"
+        },
+        {
+          "Date": "02-10-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "77092",
+          "Mainland Visitors": "47222",
+          "Other Visitors": "924",
+          "Total": "125238"
+        },
+        {
+          "Date": "02-10-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "50241",
+          "Mainland Visitors": "51450",
+          "Other Visitors": "681",
+          "Total": "102372"
+        },
+        {
+          "Date": "02-10-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "60086",
+          "Mainland Visitors": "47529",
+          "Other Visitors": "594",
+          "Total": "108209"
+        },
+        {
+          "Date": "02-10-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "35565",
+          "Mainland Visitors": "37532",
+          "Other Visitors": "1514",
+          "Total": "74611"
+        },
+        {
+          "Date": "02-10-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "45769",
+          "Mainland Visitors": "31109",
+          "Other Visitors": "1282",
+          "Total": "78160"
+        }
+      ]
+    },
+    {
+      "archive_timestamp_hkt": "20261004-1020",
+      "archive_url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Fwww.immd.gov.hk%2Fopendata%2Feng%2Ftransport%2Fimmigration_clearance%2Fstatistics_on_daily_passenger_traffic.csv&time=20261004-1020",
+      "raw_bytes": 3353554,
+      "raw_sha256": "cb0ddb26e66f64f1a92fbf8341eced6cf8d1aa786f92ea32b2aeefc661e664f2",
+      "latest_observation_date": "2026-10-03",
+      "latest_target_rows": [
+        {
+          "Date": "03-10-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "75165",
+          "Mainland Visitors": "33382",
+          "Other Visitors": "884",
+          "Total": "109431"
+        },
+        {
+          "Date": "03-10-2026",
+          "Control Point": "Lo Wu",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "94591",
+          "Mainland Visitors": "45043",
+          "Other Visitors": "1071",
+          "Total": "140705"
+        },
+        {
+          "Date": "03-10-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "56062",
+          "Mainland Visitors": "48425",
+          "Other Visitors": "712",
+          "Total": "105199"
+        },
+        {
+          "Date": "03-10-2026",
+          "Control Point": "Lok Ma Chau Spur Line",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "73326",
+          "Mainland Visitors": "44134",
+          "Other Visitors": "695",
+          "Total": "118155"
+        },
+        {
+          "Date": "03-10-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Arrival",
+          "Hong Kong Residents": "45043",
+          "Mainland Visitors": "33628",
+          "Other Visitors": "1254",
+          "Total": "79925"
+        },
+        {
+          "Date": "03-10-2026",
+          "Control Point": "Shenzhen Bay",
+          "Arrival / Departure": "Departure",
+          "Hong Kong Residents": "57020",
+          "Mainland Visitors": "34052",
+          "Other Visitors": "1524",
+          "Total": "92596"
+        }
+      ]
+    }
+  ]
+}

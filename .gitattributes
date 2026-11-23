@@ -1,0 +1,6 @@
+# Preserve byte-for-byte passenger verification across Windows and Unix checkouts.
+data/passenger_daily.csv text eol=lf
+data/passenger_audit.json text eol=lf
+data/passenger_release_evidence.json text eol=lf
+data/raw/passenger_source.json text eol=lf
+*.gz binary
