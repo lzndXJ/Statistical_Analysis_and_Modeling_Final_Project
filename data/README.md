@@ -14,6 +14,22 @@
 | Other Visitors | `other_visitors` | 其他访客人次 |
 | Total | `passengers` | 对应日期、口岸和方向的总人次 |
 
+### 客流清洗交付（Issue #1）
+
+[`passenger_daily.csv`](passenger_daily.csv) 已交付，UTF-8、逗号分隔、LF 换行，按 `date + control_point + direction` 升序排列。日期为文本 `YYYY-MM-DD`，四个人次字段均为非负整数，单位为人次；入境和出境以香港为参照。`Lok Ma Chau Spur Line` 是落马洲支线，不包含 `Lok Ma Chau`。
+
+2026-11-23 下载的官方原表覆盖 2021-01-01 至 2026-11-22。清洗表仅保留项目区间 2024-01-01 至 2026-10-31，共 **1,035 天、6,210 条**，六个口岸方向组合各 1,035 条。主键无重复、日期无缺报，四个人次字段无缺失或零值，三类旅客之和逐行等于总人次。只进行筛选、日期格式转换、方向映射和排序，未填补、删去极端值或修改人次。
+
+- [核验说明](../docs/客流核验说明.md)：清洗口径、分组覆盖、抽查、异常处理、发布时间的证据与限制，以及交付大小。
+- [`passenger_audit.json`](passenger_audit.json)：由脚本生成的覆盖、质量、分组统计和输出校验值。
+- [`raw/statistics_on_daily_passenger_traffic.csv.gz`](raw/statistics_on_daily_passenger_traffic.csv.gz)：完整官方 CSV 的无损压缩快照，解压后保留原始字节。
+- [`raw/passenger_source.json`](raw/passenger_source.json)：官方链接、香港时间下载时刻、HTTP 响应时间、Last-Modified、大小和 SHA-256。
+- [`passenger_release_evidence.json`](passenger_release_evidence.json)：2026-10-01 至 10-04 的官方历史快照归档时间及最新日期的六条客流。
+
+在仓库根目录运行 `python code/clean_passenger.py` 可离线重建；`python code/clean_passenger.py --check` 核对原始快照和交付内容。显式加 `--download` 才会联网刷新原始快照，刷新后需重新审阅核验说明。完整命令见[代码说明](../code/README.md)。
+
+历史快照样本支持预测目标日 D 时，在 D−1 日 18:00 暂用 D−2 及更早客流。每日固定首发时刻、全区间延迟和历史修订仍未确认，不能将本次下载的修订后历史表等同于当时可见版本，详见核验说明。
+
 ## 假期与调休
 
 [`holidays.csv`](holidays.csv) 为 UTF-8 CSV，按 `date` 升序排列，覆盖 2024-01-01 至 2026-10-31（含首尾），每个日期一行。客流表可按 `date` 多对一连接，同一日期的各口岸和方向共用这些标记。
@@ -65,4 +81,4 @@
 4. 核对官方数据的实际发布时间。做历史回测时，按预测日前一天香港时间 18:00 确定哪些观测已经能取得。
 5. 提交数据来源、字段说明、可复现的清洗脚本、核验结论与项目使用的数据。交付的数据文件合计控制在 **10 MB 以内**。
 
-客流全量 CSV 的实际记录数、日期连续性和提交文件大小，安排在数据准备阶段验收。
+客流全量快照有 63,678 条；本次筛选后的日期连续性和交付大小已核验。当前 `data/` 下数据及 JSON 凭据共 1,009,940 字节（不含本说明），低于 10 MB。合表后的重复、丢失和假期匹配检查由 Issue #3 完成。
