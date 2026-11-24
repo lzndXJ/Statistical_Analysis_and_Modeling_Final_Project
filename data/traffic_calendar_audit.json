@@ -1,0 +1,97 @@
+{
+  "start_date": "2024-01-01",
+  "end_date": "2026-10-31",
+  "input_versions": {
+    "hash_convention": "SHA-256 of parsed CSV, sorted by key, UTF-8 without BOM, LF",
+    "passenger_daily.csv": "efbe121fefbb7d2f985d3543cc1ea2a353a83b3194ec29b667c152e8c53a8cab",
+    "holidays.csv": "cbed92097de41644ce7839aa0795d334e0458efcf259690a8a62ab78347bd027"
+  },
+  "passenger_rows_before": 6210,
+  "calendar_rows": 1035,
+  "expected_days": 1035,
+  "expected_rows": 6210,
+  "rows_after": 6210,
+  "unique_keys_after": 6210,
+  "duplicate_passenger_keys": [],
+  "duplicate_calendar_dates": [],
+  "unmatched_passenger_dates": [],
+  "unused_calendar_dates": [],
+  "missing_passenger_keys": [],
+  "passenger_fields_unchanged": true,
+  "calendar_fields_match_source": true,
+  "output_columns": [
+    "date",
+    "control_point",
+    "direction",
+    "hong_kong_residents",
+    "mainland_visitors",
+    "other_visitors",
+    "passengers",
+    "hk_holiday",
+    "mainland_holiday",
+    "mainland_makeup_workday",
+    "is_weekend",
+    "hk_holiday_name",
+    "mainland_holiday_name",
+    "mainland_makeup_workday_for",
+    "hk_source_url",
+    "mainland_source_url"
+  ],
+  "flags": {
+    "hk_holiday": {
+      "calendar_days": 49,
+      "joined_rows": 294
+    },
+    "mainland_holiday": {
+      "calendar_days": 91,
+      "joined_rows": 546
+    },
+    "mainland_makeup_workday": {
+      "calendar_days": 19,
+      "joined_rows": 114
+    },
+    "is_weekend": {
+      "calendar_days": 295,
+      "joined_rows": 1770
+    }
+  },
+  "rows_by_year": {
+    "2024": 2196,
+    "2025": 2190,
+    "2026": 1824
+  },
+  "groups": [
+    {
+      "control_point": "Lo Wu",
+      "direction": "arrival",
+      "rows": 1035
+    },
+    {
+      "control_point": "Lo Wu",
+      "direction": "departure",
+      "rows": 1035
+    },
+    {
+      "control_point": "Lok Ma Chau Spur Line",
+      "direction": "arrival",
+      "rows": 1035
+    },
+    {
+      "control_point": "Lok Ma Chau Spur Line",
+      "direction": "departure",
+      "rows": 1035
+    },
+    {
+      "control_point": "Shenzhen Bay",
+      "direction": "arrival",
+      "rows": 1035
+    },
+    {
+      "control_point": "Shenzhen Bay",
+      "direction": "departure",
+      "rows": 1035
+    }
+  ],
+  "output_bytes": 502974,
+  "output_sha256": "1283d28c7842dd0fed782a33703ca8dd4b6485f3c4fac45d1347bcf88622bf62"
+}
