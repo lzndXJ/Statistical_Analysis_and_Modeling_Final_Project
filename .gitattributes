@@ -3,4 +3,6 @@ data/passenger_daily.csv text eol=lf
 data/passenger_audit.json text eol=lf
 data/passenger_release_evidence.json text eol=lf
 data/raw/passenger_source.json text eol=lf
+data/traffic_calendar.csv text eol=lf
+data/traffic_calendar_audit.json text eol=lf
 *.gz binary

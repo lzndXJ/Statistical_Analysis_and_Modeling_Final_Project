@@ -65,7 +65,24 @@
 
 在仓库根目录运行 `python code/build_holidays.py` 可离线重建日历。运行 `python code/build_holidays.py --check` 可检查现有 CSV 是否与脚本一致。
 
-## 拟交付的文件
+## 分析表交付（Issue #3）
+
+[`traffic_calendar.csv`](traffic_calendar.csv) 将已交付的客流表与假期表按 `date` 多对一左连接，保留全部原客流字段并追加全部日历字段（共用 `date` 只保留一列）。共 **6,210 行、16 列**，覆盖 2024-01-01 至 2026-10-31，按 `date + control_point + direction` 升序排列，UTF-8 无 BOM、LF 换行。
+
+| 字段组 | 列及口径 |
+| --- | --- |
+| 原客流 7 列 | `date`、`control_point`、`direction`、`hong_kong_residents`、`mainland_visitors`、`other_visitors`、`passengers`；与客流输入逐字段一致，单位仍为人次 |
+| 追加的 4 个标记 | `hk_holiday`、`mainland_holiday`、`mainland_makeup_workday`、`is_weekend`；均为 `0` 或 `1`，口径沿用上面的日历说明 |
+| 追加的 3 个名称 | `hk_holiday_name`、`mainland_holiday_name`、`mainland_makeup_workday_for`；未标记时为空字符串 |
+| 追加的 2 个来源 | `hk_source_url`、`mainland_source_url`；直接保留假期表的官方链接，没有对应假期或补班时为空字符串 |
+
+日历的 1,035 个日期全部唯一；合并前后客流行数均为 6,210，主键保持唯一，无未匹配日期、无丢失、无新增客流记录。每个日期对应六条客流，因此香港假期 49 天对应 294 行、内地放假 91 天对应 546 行、内地补班 19 天对应 114 行、周末 295 天对应 1,770 行。统计假期天数时应按日期去重，不能将展开后的客流行数当作天数。
+
+[`traffic_calendar_audit.json`](traffic_calendar_audit.json) 保存自动核验结果和版本校验值；[合表核验说明](../docs/分析表合并核验说明.md) 保存输入版本、抽查样本及交接限制。运行 `python code/merge_traffic_calendar.py` 可离线重建，`python code/merge_traffic_calendar.py --check` 可只检查、不写入。
+
+本表中的假期标记与 `passengers` 都对应本行 `date`。建模时以目标日为日期对齐已知日历信息，历史客流仍遵守目标日前两天及更早的可得性约定。高客流标签和训练期阈值由后续建模阶段生成。本次为 A 的合表检查，尚需 C 按 Issue #4 独立复核。
+
+## 数据文件
 
 | 建议文件名 | 内容 |
 | --- | --- |
@@ -81,4 +98,4 @@
 4. 核对官方数据的实际发布时间。做历史回测时，按预测日前一天香港时间 18:00 确定哪些观测已经能取得。
 5. 提交数据来源、字段说明、可复现的清洗脚本、核验结论与项目使用的数据。交付的数据文件合计控制在 **10 MB 以内**。
 
-客流全量快照有 63,678 条；本次筛选后的日期连续性和交付大小已核验。当前 `data/` 下数据及 JSON 凭据共 1,009,940 字节（不含本说明），低于 10 MB。合表后的重复、丢失和假期匹配检查由 Issue #3 完成。
+客流全量快照有 63,678 条；筛选后以及合表后的日期连续性和交付大小已核验。分析表为 502,974 字节，合表核验 JSON 为 2,332 字节。当前 `data/` 下 CSV、JSON 和压缩原始数据共 **1,515,246 字节**（约 1.52 MB，不含本说明），低于 10 MB。
