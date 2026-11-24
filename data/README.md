@@ -80,7 +80,7 @@
 
 [`traffic_calendar_audit.json`](traffic_calendar_audit.json) 保存自动核验结果和版本校验值；[合表核验说明](../docs/分析表合并核验说明.md) 保存输入版本、抽查样本及交接限制。运行 `python code/merge_traffic_calendar.py` 可离线重建，`python code/merge_traffic_calendar.py --check` 可只检查、不写入。
 
-本表中的假期标记与 `passengers` 都对应本行 `date`。建模时以目标日为日期对齐已知日历信息，历史客流仍遵守目标日前两天及更早的可得性约定。高客流标签和训练期阈值由后续建模阶段生成。本次为 A 的合表检查，尚需 C 按 Issue #4 独立复核。
+本表中的假期标记与 `passengers` 都对应本行 `date`。建模时以目标日为日期对齐已知日历信息，历史客流仍遵守目标日前两天及更早的可得性约定。高客流标签和训练期阈值由后续建模阶段生成。C 对照官方原表和公告的结果见[分析表独立复核与建模交接](../docs/分析表独立复核与建模交接.md)。
 
 ## 数据文件
 
