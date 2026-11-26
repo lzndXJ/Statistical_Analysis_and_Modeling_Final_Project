@@ -5,4 +5,10 @@ data/passenger_release_evidence.json text eol=lf
 data/raw/passenger_source.json text eol=lf
 data/traffic_calendar.csv text eol=lf
 data/traffic_calendar_audit.json text eol=lf
+data/weather_daily.csv text eol=lf
+data/weather_sources.json text eol=lf
+# Keep generated text artifacts byte-for-byte reproducible across checkouts.
+docs/探索分析/图表/*.csv text eol=lf
+docs/探索分析/图表/*.json text eol=lf
+docs/探索分析/天气关联/*.csv text eol=lf
 *.gz binary

@@ -1,0 +1,19 @@
+control_point,direction,year,days,first_date,last_date,mean_passengers
+Lo Wu,arrival,2024,305,2024-01-01,2024-10-31,85234.41
+Lo Wu,arrival,2025,304,2025-01-01,2025-10-31,93637.78
+Lo Wu,arrival,2026,304,2026-01-01,2026-10-31,100459.98
+Lo Wu,departure,2024,305,2024-01-01,2024-10-31,87106.30
+Lo Wu,departure,2025,304,2025-01-01,2025-10-31,96325.91
+Lo Wu,departure,2026,304,2026-01-01,2026-10-31,104169.07
+Lok Ma Chau Spur Line,arrival,2024,305,2024-01-01,2024-10-31,72790.35
+Lok Ma Chau Spur Line,arrival,2025,304,2025-01-01,2025-10-31,78456.38
+Lok Ma Chau Spur Line,arrival,2026,304,2026-01-01,2026-10-31,85823.80
+Lok Ma Chau Spur Line,departure,2024,305,2024-01-01,2024-10-31,74937.62
+Lok Ma Chau Spur Line,departure,2025,304,2025-01-01,2025-10-31,80451.94
+Lok Ma Chau Spur Line,departure,2026,304,2026-01-01,2026-10-31,87426.90
+Shenzhen Bay,arrival,2024,305,2024-01-01,2024-10-31,46516.85
+Shenzhen Bay,arrival,2025,304,2025-01-01,2025-10-31,60024.51
+Shenzhen Bay,arrival,2026,304,2026-01-01,2026-10-31,71477.74
+Shenzhen Bay,departure,2024,305,2024-01-01,2024-10-31,45351.53
+Shenzhen Bay,departure,2025,304,2025-01-01,2025-10-31,58867.40
+Shenzhen Bay,departure,2026,304,2026-01-01,2026-10-31,70146.53

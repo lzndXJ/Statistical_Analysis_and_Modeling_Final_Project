@@ -4,7 +4,7 @@
 
 香港特别行政区政府入境事务处提供逐日统计。项目使用 2024-01-01 至 2026-10-31 的罗湖、落马洲支线和深圳湾记录，每个口岸每天区分入境和出境。数据来源及权利归属为香港特别行政区政府入境事务处，数据经 DATA.GOV.HK 提供。提交数据时一并记录原始链接、下载日期和使用区间。 [官方英文逐日客流 CSV](https://www.immd.gov.hk/opendata/eng/transport/immigration_clearance/statistics_on_daily_passenger_traffic.csv) · [官方英文字段说明](https://www.immd.gov.hk/opendata/eng/transport/immigration_clearance/data_specification_for_statistics_on_daily_passenger_traffic.pdf) · [DATA.GOV.HK 使用条款](https://data.gov.hk/en/terms-and-conditions)
 
-| 官方字段（英文版） | 建议提交字段 | 说明 |
+| 官方字段（英文版） | 项目字段 | 说明 |
 | --- | --- | --- |
 | Date | `date` | 观测日期，统一为 `YYYY-MM-DD` |
 | Control Point | `control_point` | Lo Wu、Lok Ma Chau Spur Line、Shenzhen Bay |
@@ -20,7 +20,7 @@
 
 2026-11-23 下载的官方原表覆盖 2021-01-01 至 2026-11-22。清洗表仅保留项目区间 2024-01-01 至 2026-10-31，共 **1,035 天、6,210 条**，六个口岸方向组合各 1,035 条。主键无重复、日期无缺报，四个人次字段无缺失或零值，三类旅客之和逐行等于总人次。只进行筛选、日期格式转换、方向映射和排序，未填补、删去极端值或修改人次。
 
-- [核验说明](../docs/客流核验说明.md)：清洗口径、分组覆盖、抽查、异常处理、发布时间的证据与限制，以及交付大小。
+- [核验说明](../docs/数据核验/客流核验说明.md)：清洗口径、分组覆盖、抽查、异常处理、发布时间的证据与限制，以及交付大小。
 - [`passenger_audit.json`](passenger_audit.json)：由脚本生成的覆盖、质量、分组统计和输出校验值。
 - [`raw/statistics_on_daily_passenger_traffic.csv.gz`](raw/statistics_on_daily_passenger_traffic.csv.gz)：完整官方 CSV 的无损压缩快照，解压后保留原始字节。
 - [`raw/passenger_source.json`](raw/passenger_source.json)：官方链接、香港时间下载时刻、HTTP 响应时间、Last-Modified、大小和 SHA-256。
@@ -65,37 +65,49 @@
 
 在仓库根目录运行 `python code/build_holidays.py` 可离线重建日历。运行 `python code/build_holidays.py --check` 可检查现有 CSV 是否与脚本一致。
 
-## 分析表交付（Issue #3）
+## 天气数据（Issue #10）
 
-[`traffic_calendar.csv`](traffic_calendar.csv) 将已交付的客流表与假期表按 `date` 多对一左连接，保留全部原客流字段并追加全部日历字段（共用 `date` 只保留一列）。共 **6,210 行、16 列**，覆盖 2024-01-01 至 2026-10-31，按 `date + control_point + direction` 升序排列，UTF-8 无 BOM、LF 换行。
+[`weather_daily.csv`](weather_daily.csv) 按目标日保存 1,035 行。表中保留预报发布时间、归档时间及探索分析使用的天气实况，便于核对。官方原始文件的链接与 SHA-256 见[天气来源清单](weather_sources.json)。
+
+- 次日显著降雨概率来自香港天文台九天预报的 RSS 历史归档。对目标日 D，从 D−1 当天的归档中选截至香港时间 18:00 已发布且已归档的最新版本，读取 D 日的等级。显著降雨指全港普遍日雨量达 10 毫米或以上。受归档频率影响，选中的版本可能早于当时的最新预报。 [九天预报 RSS](https://data.gov.hk/en-data/dataset/hk-hko-rss-9-day-weather-forecast/resource/655202ef-aef7-4ad6-8c1b-f75878cd3ebe) · [显著降雨概率定义](https://www.hko.gov.hk/en/education/weather/rain/00568-Q-%26-A-for-Probability-of-Significant-Rain.html)
+- 台风信号来自香港天文台月报的警告生效区间。对目标日 D，取香港时间 D−1 日 18:00 正在生效的热带气旋警告信号。 [天文台月报](https://www.hko.gov.hk/en/publica/pubdata.htm)
+
+2024-12-20 的前一天只有 21:20 的预报归档，该目标日的降雨预报留空。2025-09-24 的入表值为 `High` 和 `8`，对应 9 月 23 日 18:00 的预测时点。完整的天气关联试验及原始数据重建方法见[天气与客流](../docs/探索分析/天气关联/天气与客流.md)。
+
+## 分析主表（Issue #3、#10）
+
+[`traffic_calendar.csv`](traffic_calendar.csv) 是探索与建模的共用主表。它以客流为左表，按目标日 `date` 多对一连接日历和两项天气特征。共 **1,035 天、6,210 行、18 列**，覆盖 2024-01-01 至 2026-10-31，按 `date + control_point + direction` 升序排列，UTF-8 无 BOM、LF 换行。
 
 | 字段组 | 列及口径 |
 | --- | --- |
-| 原客流 7 列 | `date`、`control_point`、`direction`、`hong_kong_residents`、`mainland_visitors`、`other_visitors`、`passengers`；与客流输入逐字段一致，单位仍为人次 |
-| 追加的 4 个标记 | `hk_holiday`、`mainland_holiday`、`mainland_makeup_workday`、`is_weekend`；均为 `0` 或 `1`，口径沿用上面的日历说明 |
-| 追加的 3 个名称 | `hk_holiday_name`、`mainland_holiday_name`、`mainland_makeup_workday_for`；未标记时为空字符串 |
-| 追加的 2 个来源 | `hk_source_url`、`mainland_source_url`；直接保留假期表的官方链接，没有对应假期或补班时为空字符串 |
+| 客流 7 列 | `date`、`control_point`、`direction`、`hong_kong_residents`、`mainland_visitors`、`other_visitors`、`passengers`。人次以原始单位计 |
+| 日历标记 4 列 | `hk_holiday`、`mainland_holiday`、`mainland_makeup_workday`、`is_weekend`。均为 `0` 或 `1` |
+| 日历名称 3 列 | `hk_holiday_name`、`mainland_holiday_name`、`mainland_makeup_workday_for`。对应标记为 `0` 时留空 |
+| 日历来源 2 列 | `hk_source_url`、`mainland_source_url`。有对应假期或补班时保留官方链接 |
+| 次日显著降雨概率 `forecast_psr` | 保留天文台五档 `Low`、`Medium Low`、`Medium`、`Medium High`、`High`，分别为低、中低、中等、中高、高。覆盖 1,034 天、6,204 行，2024-12-20 的六行留空 |
+| 前一天 18:00 台风信号 `tc_signal_at_cutoff` | 整数信号编号 `0`、`1`、`3`、`8`、`9`、`10`。`0` 表示该时点无信号，八号的各风向统一记 `8`。覆盖 1,035 天、6,210 行 |
 
-日历的 1,035 个日期全部唯一；合并前后客流行数均为 6,210，主键保持唯一，无未匹配日期、无丢失、无新增客流记录。每个日期对应六条客流，因此香港假期 49 天对应 294 行、内地放假 91 天对应 546 行、内地补班 19 天对应 114 行、周末 295 天对应 1,770 行。统计假期天数时应按日期去重，不能将展开后的客流行数当作天数。
+日历和逐日天气各含 1,035 个唯一日期。合表后共有 6,210 个唯一主键，原有 16 列与 #4 复核的表逐行逐列相同。每个日期的六条记录共用日历和天气值。香港假期 49 天对应 294 行、内地放假 91 天对应 546 行、内地补班 19 天对应 114 行、周末 295 天对应 1,770 行。统计天气和假期天数时按日期去重。
 
-[`traffic_calendar_audit.json`](traffic_calendar_audit.json) 保存自动核验结果和版本校验值；[合表核验说明](../docs/分析表合并核验说明.md) 保存输入版本、抽查样本及交接限制。运行 `python code/merge_traffic_calendar.py` 可离线重建，`python code/merge_traffic_calendar.py --check` 可只检查、不写入。
+[`traffic_calendar_audit.json`](traffic_calendar_audit.json) 记录版本校验值、天气特征覆盖和缺失日期。运行 `python code/merge_traffic_calendar.py` 可从仓库内三张输入表离线重建，`python code/merge_traffic_calendar.py --check` 可只校验。原客流与日历的复核依据及当前版本见[分析表独立复核与建模交接](../docs/数据核验/分析表独立复核与建模交接.md)。
 
-本表中的假期标记与 `passengers` 都对应本行 `date`。建模时以目标日为日期对齐已知日历信息，历史客流仍遵守目标日前两天及更早的可得性约定。高客流标签和训练期阈值由后续建模阶段生成。C 对照官方原表和公告的结果见[分析表独立复核与建模交接](../docs/分析表独立复核与建模交接.md)。
+本行 `date` 是预测目标日。`passengers` 为该日回归的实际值，已知日历与两项天气按同一目标日对齐。历史客流暂用 D−2 及更早且已发布的记录。高客流标签和训练期阈值由后续建模阶段生成。
 
 ## 数据文件
 
-| 建议文件名 | 内容 |
+| 文件名 | 内容 |
 | --- | --- |
 | `passenger_daily.csv` | 三个口岸按日期和方向清洗后的客流数据 |
 | `holidays.csv` | 每日的 `date`、`hk_holiday`、`mainland_holiday`、`mainland_makeup_workday`，记录节假日名称和来源 |
-| `traffic_calendar.csv` | 按日期合并的共用分析表，保留口岸和方向，供项目负责人开始分析 |
+| `weather_daily.csv`、`weather_sources.json` | 按目标日整理的天气来源表及其来源清单 |
+| `traffic_calendar.csv`、`traffic_calendar_audit.json` | 带日历和两项天气特征的分析主表及其核验结果 |
 
 ## 数据交接的核验要求
 
 1. 观测区间共 1,035 天。三个口岸和两个方向全部齐全时应有 **6,210 条**。检查实际覆盖、日期断点和 `date + control_point + direction` 的唯一性，并列出异常记录。
 2. 检查人次为非负整数，核对三类旅客之和与总人次。区分真实零值和缺报。对重复、缺失或异常的处理保留记录。
 3. 抽查两地假期和调休补班日期与公告一致，确认按日期合表后客流记录没有重复或丢失。
-4. 核对官方数据的实际发布时间。做历史回测时，按预测日前一天香港时间 18:00 确定哪些观测已经能取得。
+4. 核对官方数据的实际发布时间。做历史回测时，按香港时间 D−1 日 18:00 核对天气预报的发布与归档时间、当时有效的台风信号及历史客流的可得性。
 5. 提交数据来源、字段说明、可复现的清洗脚本、核验结论与项目使用的数据。交付的数据文件合计控制在 **10 MB 以内**。
 
-客流全量快照有 63,678 条；筛选后以及合表后的日期连续性和交付大小已核验。分析表为 502,974 字节，合表核验 JSON 为 2,332 字节。当前 `data/` 下 CSV、JSON 和压缩原始数据共 **1,515,246 字节**（约 1.52 MB，不含本说明），低于 10 MB。
+客流全量快照有 63,678 条。筛选和合表后的日期连续性及交付大小已核验。分析主表为 550,413 字节，合表核验 JSON 为 3,063 字节。当前 `data/` 下 CSV、JSON 和压缩原始数据共 **1,678,194 字节**（约 1.68 MB），低于 10 MB。

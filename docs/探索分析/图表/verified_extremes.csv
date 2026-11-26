@@ -1,0 +1,13 @@
+extreme,date,control_point,direction,hong_kong_residents,mainland_visitors,other_visitors,passengers,is_weekend,hk_holiday,mainland_holiday,mainland_makeup_workday,hk_holiday_name,mainland_holiday_name,mainland_makeup_workday_for,raw_line,raw_date,raw_direction
+min,2025-09-24,Lo Wu,arrival,6716,397,40,7153,0,0,0,0,,,,51782,24-09-2025,Arrival
+max,2026-05-25,Lo Wu,arrival,165270,13003,998,179271,0,1,0,0,佛誕翌日,,,58586,25-05-2026,Arrival
+min,2025-09-24,Lo Wu,departure,2402,323,16,2741,0,0,0,0,,,,51783,24-09-2025,Departure
+max,2026-10-17,Lo Wu,departure,146653,22688,1262,170603,1,0,0,0,,,,62649,17-10-2026,Departure
+min,2025-09-24,Lok Ma Chau Spur Line,arrival,5064,441,18,5523,0,0,0,0,,,,51784,24-09-2025,Arrival
+max,2026-05-25,Lok Ma Chau Spur Line,arrival,129091,16120,596,145807,0,1,0,0,佛誕翌日,,,58588,25-05-2026,Arrival
+min,2025-09-24,Lok Ma Chau Spur Line,departure,1716,287,19,2022,0,0,0,0,,,,51785,24-09-2025,Departure
+max,2025-04-18,Lok Ma Chau Spur Line,departure,144818,11817,663,157298,0,1,0,0,耶穌受難節,,,47333,18-04-2025,Departure
+min,2025-09-24,Shenzhen Bay,arrival,3115,546,47,3708,0,0,0,0,,,,51796,24-09-2025,Arrival
+max,2026-10-19,Shenzhen Bay,arrival,121513,14259,4331,140103,0,1,0,0,重陽節翌日,,,62718,19-10-2026,Arrival
+min,2025-09-24,Shenzhen Bay,departure,699,164,18,881,0,0,0,0,,,,51797,24-09-2025,Departure
+max,2026-10-17,Shenzhen Bay,departure,106283,20304,2424,129011,1,0,0,0,,,,62663,17-10-2026,Departure
