@@ -1,0 +1,299 @@
+{
+  "sources": {
+    "rain.csv": {
+      "url": "https://data.weather.gov.hk/weatherAPI/cis/csvfile/HKO/ALL/daily_HKO_RF_ALL.csv",
+      "sha256": "4d25d10550f0d98f77e1225a5bf4d92e8e933d02f1fc3946b9cab82287ff03ad"
+    },
+    "mean_temp.csv": {
+      "url": "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=CLMTEMP&rformat=csv&station=HKO",
+      "sha256": "a47a0c7dafb6055eb580202556676e5b17ee4254ab1274fcf1c9a96b6bd5e124"
+    },
+    "forecast_202312.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20231201",
+      "sha256": "c7bfe1e3fc8467b58b7fa3db0b9b55da617837ec6282b76e3dda556bb68ce26c"
+    },
+    "warnings_202312.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2023/mws202312.htm",
+      "sha256": "343929ffe157dbac0a4da4a5d84cb0df52d8215f779429f73b04b771fc1e7f16"
+    },
+    "forecast_202401.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240101",
+      "sha256": "8f11522d6e238fd491d66805cee0335726b0463096c469b0c1f3d67d07e2fbe7"
+    },
+    "warnings_202401.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202401.htm",
+      "sha256": "321bb0454ecd96e14da4aafec7a9bd6988e755f21c9c8b0b268452eea87fc559"
+    },
+    "forecast_202402.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240201",
+      "sha256": "279ca6504e25de354f192ba43bd85a0311cfe6d50fe7ad6df234544bea25d92a"
+    },
+    "warnings_202402.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202402.htm",
+      "sha256": "102dc475629eee3e15ccf33faab18bb7eec7ed8f85ce406fefc97f7ba82d833b"
+    },
+    "forecast_202403.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240301",
+      "sha256": "07ee3df6c27d5eeb21c14e13b4cab0e4f8759d386eefcda852f82c92a134e647"
+    },
+    "warnings_202403.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202403.htm",
+      "sha256": "56f165e5a53dfc01badd2761fb090a3f1866f8b26ff91a6e389db782026a051d"
+    },
+    "forecast_202404.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240401",
+      "sha256": "7d9ffdd998429070d6d7b5ae2979232b3894fe855dae433b43b7dc16c1607a60"
+    },
+    "warnings_202404.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202404.htm",
+      "sha256": "4084d86718dde208d2ece3954ead3e3f2500cdf46b67a5f4b4b8662eb6280c84"
+    },
+    "forecast_202405.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240501",
+      "sha256": "2d045cc8eddfa69a8d09660ec2c7d25b3663859e2184783217043626b4d392ab"
+    },
+    "warnings_202405.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202405.htm",
+      "sha256": "3199de15b024e4d58ef61ab04b5eb7a08b8ba7409e3a18c227dea46477187c3f"
+    },
+    "forecast_202406.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240601",
+      "sha256": "04deb95755f28a7d1ccbcf4516061be22c71addfb243e1360fcd82a905880103"
+    },
+    "warnings_202406.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202406.htm",
+      "sha256": "8db6a5269d36bcd9228380670ace4fc038175e09c25b176714bc72fd8b8bbcea"
+    },
+    "forecast_202407.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240701",
+      "sha256": "0354aa65522feb5abc30855130153a2d595daa249c31c6dcb96fbd6a554eacc3"
+    },
+    "warnings_202407.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202407.htm",
+      "sha256": "07fd072df5c46d42b38fde9b933f2c9aa230b5df2c66a6a7549262ccea3cd496"
+    },
+    "forecast_202408.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240801",
+      "sha256": "818a5edcc401620795810dac483939d304912e1168b5f25d687171ca0e6ece9d"
+    },
+    "warnings_202408.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202408.htm",
+      "sha256": "06feb02d703d5253dc4d7b8707329a57ce285f2761602db1b02e72b3f22b5d4d"
+    },
+    "forecast_202409.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20240901",
+      "sha256": "b3ef1867fd7ba13c0dfbcea9eb4cae97310ca41005ddbead8d5855209ee41e64"
+    },
+    "warnings_202409.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202409.htm",
+      "sha256": "409f888fe9ba9a9a2e6cba8ecb9f4d1af71d1c689b8f393d6f1fa7273bb6adee"
+    },
+    "forecast_202410.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20241001",
+      "sha256": "3cd8d9884fc7fdd1dc09962d82482992ce00b0b5f328c6b8ffc1aca05a7cf373"
+    },
+    "warnings_202410.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202410.htm",
+      "sha256": "6549eae292709b93a7c1b73f2fa4fc1079168bfe56090130dc7ee0b6523a18c6"
+    },
+    "forecast_202411.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20241101",
+      "sha256": "48e6c6640c2663f273584eac1969f224b68c97d0d0a380fe09806fd37c886eca"
+    },
+    "warnings_202411.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202411.htm",
+      "sha256": "4f0aa5992d32a60e85bc9bebddfb3f011de9fde0f29712a049b06a06f9f4be4c"
+    },
+    "forecast_202412.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20241201",
+      "sha256": "07a69f86d9d20bcd6bbe9287222b2341e27deb760b4acf80a8c3ee8070fcb4e2"
+    },
+    "warnings_202412.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2024/mws202412.htm",
+      "sha256": "bb186b14fa25524485ab357e1990fdd73a9398da863177e7965ede9d19b05d9f"
+    },
+    "forecast_202501.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250101",
+      "sha256": "959309ab7dfc21c15b024fbfa7045a741a2adc38962e0edb8700b184566a126e"
+    },
+    "warnings_202501.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202501.htm",
+      "sha256": "61d07a0c9a926ce8d0a710586497a9b919f39aa03c02112cc71f9006bdbb5d26"
+    },
+    "forecast_202502.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250201",
+      "sha256": "5b98b612fdd5f34e17b317e7c5d6622bb7b01ef0d260e0e61ee1f84ed7d13571"
+    },
+    "warnings_202502.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202502.htm",
+      "sha256": "d7d02e1b929f26bb20d9a0f7ff587c5ce3909a96827bce2b63aa84841407664e"
+    },
+    "forecast_202503.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250301",
+      "sha256": "13e5c8bf04fa755f4f63fefa12451a48faccf6ffc40645a305dc7807b038eb1d"
+    },
+    "warnings_202503.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202503.htm",
+      "sha256": "8ecd5476a5cdc348059e85d4f9cbf57e31603f35054e7e8dc1002d5ae1d5b135"
+    },
+    "forecast_202504.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250401",
+      "sha256": "98715f7b586b98a7c0acc72ece9c829e4ad95e3c434c2b33e30959d8abb532d9"
+    },
+    "warnings_202504.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202504.htm",
+      "sha256": "19d78f5ce0f4eac169fe5dab33317100e332d78d424e57aec5cc8fdfe36b1062"
+    },
+    "forecast_202505.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250501",
+      "sha256": "0616af73ce82495859f1e9b8a6a6f05cfab6754e2d864916987604f8cf0711fc"
+    },
+    "warnings_202505.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202505.htm",
+      "sha256": "17ec1157ef41fafd02fe6a40813e98fbb9c8e4a4d4f4542faec821e1a98cd9bc"
+    },
+    "forecast_202506.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250601",
+      "sha256": "c9303277bf83f819891bd89d17b8d4796054976f243ff4c9aa551775d086a2af"
+    },
+    "warnings_202506.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202506.htm",
+      "sha256": "8d32acb0e436d438cd3739596670d9a816c5ae68bc7508acd7dde2a2fc9f3ca5"
+    },
+    "forecast_202507.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250701",
+      "sha256": "2dff8a051555982c364a6f1375a1d1241cf29f2e9ccda8a05b74f8210724be3e"
+    },
+    "warnings_202507.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202507.htm",
+      "sha256": "d73425d1a7762879fcf375f9ed97b49627d90619b332edff0ce74bb4a2109c20"
+    },
+    "forecast_202508.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250801",
+      "sha256": "51c332cc1d9b98533f8e6aadafb0f9ec0558e253d14278d50fcdca1d4c81087e"
+    },
+    "warnings_202508.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202508.htm",
+      "sha256": "f220a6f2d6f3084dd8f861e5b422ed0f3d459d7757b3718f91eaf60f73a32e12"
+    },
+    "forecast_202509.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20250901",
+      "sha256": "574f82abb647d9267c946fe0f9e4ad50540a323b45add7cd5a4b95e5a271e40c"
+    },
+    "warnings_202509.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202509.htm",
+      "sha256": "e9d882031c6ca25a1d7c2f166463220c8d571aa2b77675d1d9e4e6a700435a3b"
+    },
+    "forecast_202510.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20251001",
+      "sha256": "a1c8547d43dbbc7b5655047186d6d7c6a8af408bb526bddc45397b4f7505df27"
+    },
+    "warnings_202510.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202510.htm",
+      "sha256": "48c8d7a6eed014781239d5c8816e2660911328ae22a32026e38f55a827c4de53"
+    },
+    "forecast_202511.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20251101",
+      "sha256": "466024ecbcf1f2cb6afeac626463f24f2b74393b25de750f5277d3299596e1c8"
+    },
+    "warnings_202511.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202511.htm",
+      "sha256": "725b9a9a051dd68a73c1c9c273fee3f4daade5cc85cfd7b20cf720010e3ff1ec"
+    },
+    "forecast_202512.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20251201",
+      "sha256": "8908a856e6a180bc0626c93c228de71b61c99a87e3eca9af9afa9d0b39ec74b5"
+    },
+    "warnings_202512.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2025/mws202512.htm",
+      "sha256": "25e161f5b0e726f98c2d6d2111e55675bdaff8f1fd33506d55a6b10b6ec8edec"
+    },
+    "forecast_202601.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260101",
+      "sha256": "92c4dd3086b55d973eb567cd8e501686413682d1dfec83a0461717fba900d33d"
+    },
+    "warnings_202601.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202601.htm",
+      "sha256": "e396ea220dd870f807d666035e7c3251fc06de188b6303692626aac13fa3c20e"
+    },
+    "forecast_202602.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260201",
+      "sha256": "f653ad99466953c64cc46dee4d972c223acc0cf3c7241105e379b8b669711893"
+    },
+    "warnings_202602.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202602.htm",
+      "sha256": "d55223f32ef9be9ba6cee21cf0e6491fea48588ec7786a8b466620858f241284"
+    },
+    "forecast_202603.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260301",
+      "sha256": "0c3a6b3cdb7bb7c8c09758183fd98176d227bef8e48820fa3bc8f9792b0109b2"
+    },
+    "warnings_202603.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202603.htm",
+      "sha256": "1b89f59f2a0cdc9ff0de989e9c86d7d01d8baf887805f1be344fe145fc341b9b"
+    },
+    "forecast_202604.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260401",
+      "sha256": "2b12cc32b81aefb0ad11e105116b4d46b09b40cebb038574bf363dbbfabff60e"
+    },
+    "warnings_202604.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202604.htm",
+      "sha256": "fc74746f1dc02d1bf28981bd886c900d5d04a9bf9090bd010c746279118a5a6d"
+    },
+    "forecast_202605.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260501",
+      "sha256": "10b02cd28c6c691725bb0ece319e9a27a66f2ad397ccf56a84b5a1d3a3526452"
+    },
+    "warnings_202605.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202605.htm",
+      "sha256": "b65e31ba4add15dbc3c769653afd117afeef35187d1d1dc60a8b660c6b5c9df6"
+    },
+    "forecast_202606.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260601",
+      "sha256": "628a7aa7fef9ffdd063f1233128e6efcb117d75089be5929f4f53a07a2569f75"
+    },
+    "warnings_202606.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202606.htm",
+      "sha256": "c8405e4cf2b8999ee2c4758a932ce487b3633f7f30e403c4190ad2d0fd16bfe2"
+    },
+    "forecast_202607.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260701",
+      "sha256": "3a7a6278b7c0ff3d1938d4bf4de6e369b0f5132c0517d5b69c5bb330396b487e"
+    },
+    "warnings_202607.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202607.htm",
+      "sha256": "0725a268346a218b646da198f348f41e672a1de7473ab1f8d7388768e179ad83"
+    },
+    "forecast_202608.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260801",
+      "sha256": "e50d53a2ce05a0d3277c5ae2903435d962bcdc02d3a863a9adaaf697b7a8f8cb"
+    },
+    "warnings_202608.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202608.htm",
+      "sha256": "314253a3d814e3bc41e1f8dbe307cf32c39156ed6e9971044bd9d908fd10a5a1"
+    },
+    "forecast_202609.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20260901",
+      "sha256": "156fcbff6e209d62da8cf3e88b691d2bb877a6e6f55dce00f47deb4cf61b0385"
+    },
+    "warnings_202609.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202609.htm",
+      "sha256": "3d0e9d04e2a3fa0c172048ce895f7b663da4efe22266054378a65cf874c2dfc3"
+    },
+    "forecast_202610.zip": {
+      "url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Frss.weather.gov.hk%2Frss%2FSeveralDaysWeatherForecast_v2.xml&time=20261001",
+      "sha256": "827587223e4480c86e61c2a07ed061ae83ae3d5eb8b0d64eff37530058ceb511"
+    },
+    "warnings_202610.html": {
+      "url": "https://www.hko.gov.hk/en/wxinfo/pastwx/mws2026/mws202610.htm",
+      "sha256": "00484dbb34bc5d6feb369aa1fb7f50eeeabe8a561c7ee90e2069162ab9a93c15"
+    }
+  },
+  "weather_daily_sha256": "e23d06cd5a8c49152894c82cc7a01ea3db7555b7960a8f31b3111ebae843d5d9",
+  "days_with_observations": 1035,
+  "warning_intervals": 267,
+  "days_with_pre_cutoff_forecast": 1034,
+  "dates_without_pre_cutoff_forecast": [
+    "2024-12-20"
+  ]
+}

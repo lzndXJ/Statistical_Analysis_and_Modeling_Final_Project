@@ -4,7 +4,8 @@
   "input_versions": {
     "hash_convention": "SHA-256 of parsed CSV, sorted by key, UTF-8 without BOM, LF",
     "passenger_daily.csv": "efbe121fefbb7d2f985d3543cc1ea2a353a83b3194ec29b667c152e8c53a8cab",
-    "holidays.csv": "cbed92097de41644ce7839aa0795d334e0458efcf259690a8a62ab78347bd027"
+    "holidays.csv": "cbed92097de41644ce7839aa0795d334e0458efcf259690a8a62ab78347bd027",
+    "weather_daily.csv": "e23d06cd5a8c49152894c82cc7a01ea3db7555b7960a8f31b3111ebae843d5d9"
   },
   "passenger_rows_before": 6210,
   "calendar_rows": 1035,
@@ -35,8 +36,40 @@
     "mainland_holiday_name",
     "mainland_makeup_workday_for",
     "hk_source_url",
-    "mainland_source_url"
+    "mainland_source_url",
+    "forecast_psr",
+    "tc_signal_at_cutoff"
   ],
+  "weather": {
+    "rows": 1035,
+    "features_match_source": true,
+    "cutoff_hkt": "D-1 18:00",
+    "forecast_psr": {
+      "available_days": 1034,
+      "missing_dates": [
+        "2024-12-20"
+      ],
+      "missing_rows": 6,
+      "days_by_level": {
+        "Low": 664,
+        "Medium Low": 112,
+        "Medium": 74,
+        "Medium High": 72,
+        "High": 112
+      }
+    },
+    "tc_signal_at_cutoff": {
+      "available_days": 1035,
+      "days_by_signal": {
+        "0": 985,
+        "1": 31,
+        "3": 16,
+        "8": 3,
+        "9": 0,
+        "10": 0
+      }
+    }
+  },
   "flags": {
     "hk_holiday": {
       "calendar_days": 49,
@@ -92,6 +125,6 @@
       "rows": 1035
     }
   ],
-  "output_bytes": 502974,
-  "output_sha256": "1283d28c7842dd0fed782a33703ca8dd4b6485f3c4fac45d1347bcf88622bf62"
+  "output_bytes": 550413,
+  "output_sha256": "29416760cf14f420231907a56362927a86d4073c35aabfcb40d294bd6096fac1"
 }

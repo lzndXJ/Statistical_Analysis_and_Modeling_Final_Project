@@ -1,0 +1,43 @@
+{
+  "reproduce_command": "python code/explore_traffic.py",
+  "input_files": {
+    "data/traffic_calendar.csv": {
+      "sha256": "29416760cf14f420231907a56362927a86d4073c35aabfcb40d294bd6096fac1"
+    },
+    "data/raw/statistics_on_daily_passenger_traffic.csv.gz": {
+      "uncompressed_sha256": "ee110e4b5887e2b5f1dd7ad71e620ddbb90a01919578837828ae714ad123c79c"
+    }
+  },
+  "runtime": {
+    "python": "3.13.9",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.6",
+    "pillow": "12.0.0"
+  },
+  "parameters": {
+    "first_date": "2024-01-01",
+    "last_date": "2026-10-31",
+    "days": 1035,
+    "observations": 6210,
+    "unit": "passenger trips",
+    "trailing_mean_days": 28,
+    "matched_year_months": [
+      1,
+      10
+    ],
+    "calendar_baseline": "ordinary_weekday",
+    "png_dpi": 300,
+    "random_seed": null
+  },
+  "output_sha256": {
+    "calendar_comparison.png": "c498dd356a4d49bb6ac65024d302f8cd3bd03cad3216ef9125db006a1dd447c3",
+    "calendar_overlap.csv": "4ee548ce7a9ae95c5883ef3ff47daee3996a9fd82eb5af7464dee8ff02b815dd",
+    "calendar_overlap.png": "1b4e9613b2aa017d6ada83f6f800fb2e6d489d5e548161a1a922b99010dc8554",
+    "calendar_summary.csv": "85811628cf5ef25e36aee36616344f251cca5d56e24af4359c85f1c4cc33c4ca",
+    "daily_trends.png": "eee456def8c45b27b878fdd152f6c94a2ed6816fb321d343f0522794c2f2cc98",
+    "group_summary.csv": "1d136bc457d83778a9dc70c7964f901f34d885c6fe0a635937c6fd00c9c721c9",
+    "matched_year_summary.csv": "038aa0cbef59fe183bdd17c1bc661cbf0244d5e409f2ea63f445066c91f17542",
+    "verified_extremes.csv": "74e6a6d9e446a024a882dd649b6864b21ba127fba4897c8ae09984bff32f4c5b"
+  }
+}

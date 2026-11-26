@@ -1,0 +1,141 @@
+sample,weather_factor,control_point,direction,days,event_days,other_days,unadjusted_pct,adjusted_pct
+all_available_dates,rain_per_10mm,Lo Wu,arrival,1035,,,-2.097,-2.496
+all_available_dates,rain_per_10mm,Lo Wu,departure,1035,,,-2.635,-2.923
+all_available_dates,rain_per_10mm,Lok Ma Chau Spur Line,arrival,1035,,,-2.429,-2.802
+all_available_dates,rain_per_10mm,Lok Ma Chau Spur Line,departure,1035,,,-2.892,-3.123
+all_available_dates,rain_per_10mm,Shenzhen Bay,arrival,1035,,,-2.350,-2.943
+all_available_dates,rain_per_10mm,Shenzhen Bay,departure,1035,,,-3.115,-3.448
+all_available_dates,rain_per_10mm,All three ports,both,1035,,,-2.507,-2.841
+all_available_dates,rain_at_least_25mm,Lo Wu,arrival,1035,93,942,-8.342,-11.332
+all_available_dates,rain_at_least_25mm,Lo Wu,departure,1035,93,942,-10.014,-12.554
+all_available_dates,rain_at_least_25mm,Lok Ma Chau Spur Line,arrival,1035,93,942,-9.858,-12.970
+all_available_dates,rain_at_least_25mm,Lok Ma Chau Spur Line,departure,1035,93,942,-11.208,-13.570
+all_available_dates,rain_at_least_25mm,Shenzhen Bay,arrival,1035,93,942,-9.295,-14.418
+all_available_dates,rain_at_least_25mm,Shenzhen Bay,departure,1035,93,942,-11.692,-15.117
+all_available_dates,rain_at_least_25mm,All three ports,both,1035,93,942,-9.802,-12.848
+all_available_dates,mean_temp_per_5c,Lo Wu,arrival,1035,,,1.596,5.760
+all_available_dates,mean_temp_per_5c,Lo Wu,departure,1035,,,0.880,3.904
+all_available_dates,mean_temp_per_5c,Lok Ma Chau Spur Line,arrival,1035,,,1.402,6.601
+all_available_dates,mean_temp_per_5c,Lok Ma Chau Spur Line,departure,1035,,,0.508,4.893
+all_available_dates,mean_temp_per_5c,Shenzhen Bay,arrival,1035,,,2.233,7.216
+all_available_dates,mean_temp_per_5c,Shenzhen Bay,departure,1035,,,0.927,4.582
+all_available_dates,mean_temp_per_5c,All three ports,both,1035,,,1.184,5.314
+all_available_dates,target_day_tc8_or_higher,Lo Wu,arrival,1035,11,1024,-47.249,-48.823
+all_available_dates,target_day_tc8_or_higher,Lo Wu,departure,1035,11,1024,-57.692,-56.919
+all_available_dates,target_day_tc8_or_higher,Lok Ma Chau Spur Line,arrival,1035,11,1024,-50.385,-51.212
+all_available_dates,target_day_tc8_or_higher,Lok Ma Chau Spur Line,departure,1035,11,1024,-59.480,-58.449
+all_available_dates,target_day_tc8_or_higher,Shenzhen Bay,arrival,1035,11,1024,-55.044,-55.725
+all_available_dates,target_day_tc8_or_higher,Shenzhen Bay,departure,1035,11,1024,-65.462,-63.564
+all_available_dates,target_day_tc8_or_higher,All three ports,both,1035,11,1024,-54.314,-54.066
+all_available_dates,target_day_rainstorm_signal,Lo Wu,arrival,1035,115,920,-9.536,-11.310
+all_available_dates,target_day_rainstorm_signal,Lo Wu,departure,1035,115,920,-9.385,-11.407
+all_available_dates,target_day_rainstorm_signal,Lok Ma Chau Spur Line,arrival,1035,115,920,-10.744,-12.829
+all_available_dates,target_day_rainstorm_signal,Lok Ma Chau Spur Line,departure,1035,115,920,-10.533,-12.624
+all_available_dates,target_day_rainstorm_signal,Shenzhen Bay,arrival,1035,115,920,-10.265,-13.649
+all_available_dates,target_day_rainstorm_signal,Shenzhen Bay,departure,1035,115,920,-11.223,-14.207
+all_available_dates,target_day_rainstorm_signal,All three ports,both,1035,115,920,-10.072,-12.256
+all_available_dates,cutoff_tc3_or_higher,Lo Wu,arrival,1035,19,1016,-24.034,-28.396
+all_available_dates,cutoff_tc3_or_higher,Lo Wu,departure,1035,19,1016,-36.331,-37.284
+all_available_dates,cutoff_tc3_or_higher,Lok Ma Chau Spur Line,arrival,1035,19,1016,-27.852,-31.513
+all_available_dates,cutoff_tc3_or_higher,Lok Ma Chau Spur Line,departure,1035,19,1016,-37.717,-38.754
+all_available_dates,cutoff_tc3_or_higher,Shenzhen Bay,arrival,1035,19,1016,-32.023,-34.897
+all_available_dates,cutoff_tc3_or_higher,Shenzhen Bay,departure,1035,19,1016,-43.468,-42.878
+all_available_dates,cutoff_tc3_or_higher,All three ports,both,1035,19,1016,-32.145,-34.210
+all_available_dates,cutoff_tc8_or_higher,Lo Wu,arrival,1035,3,1032,-60.376,-55.530
+all_available_dates,cutoff_tc8_or_higher,Lo Wu,departure,1035,3,1032,-73.990,-69.933
+all_available_dates,cutoff_tc8_or_higher,Lok Ma Chau Spur Line,arrival,1035,3,1032,-62.988,-56.939
+all_available_dates,cutoff_tc8_or_higher,Lok Ma Chau Spur Line,departure,1035,3,1032,-75.373,-70.326
+all_available_dates,cutoff_tc8_or_higher,Shenzhen Bay,arrival,1035,3,1032,-62.358,-55.827
+all_available_dates,cutoff_tc8_or_higher,Shenzhen Bay,departure,1035,3,1032,-78.957,-74.254
+all_available_dates,cutoff_tc8_or_higher,All three ports,both,1035,3,1032,-68.192,-62.665
+all_available_dates,cutoff_rainstorm_signal,Lo Wu,arrival,1035,14,1021,-1.593,-2.871
+all_available_dates,cutoff_rainstorm_signal,Lo Wu,departure,1035,14,1021,3.173,-0.116
+all_available_dates,cutoff_rainstorm_signal,Lok Ma Chau Spur Line,arrival,1035,14,1021,-2.018,-3.401
+all_available_dates,cutoff_rainstorm_signal,Lok Ma Chau Spur Line,departure,1035,14,1021,1.820,-1.161
+all_available_dates,cutoff_rainstorm_signal,Shenzhen Bay,arrival,1035,14,1021,1.483,-3.385
+all_available_dates,cutoff_rainstorm_signal,Shenzhen Bay,departure,1035,14,1021,7.549,0.078
+all_available_dates,cutoff_rainstorm_signal,All three ports,both,1035,14,1021,1.135,-2.145
+all_available_dates,forecast_psr_medium_high_or_high,Lo Wu,arrival,1034,184,850,-6.538,-10.544
+all_available_dates,forecast_psr_medium_high_or_high,Lo Wu,departure,1034,184,850,-8.949,-11.450
+all_available_dates,forecast_psr_medium_high_or_high,Lok Ma Chau Spur Line,arrival,1034,184,850,-7.605,-11.715
+all_available_dates,forecast_psr_medium_high_or_high,Lok Ma Chau Spur Line,departure,1034,184,850,-9.581,-12.195
+all_available_dates,forecast_psr_medium_high_or_high,Shenzhen Bay,arrival,1034,184,850,-5.986,-12.394
+all_available_dates,forecast_psr_medium_high_or_high,Shenzhen Bay,departure,1034,184,850,-9.145,-13.196
+all_available_dates,forecast_psr_medium_high_or_high,All three ports,both,1034,184,850,-8.008,-11.696
+all_available_dates,forecast_max_temp_per_5c,Lo Wu,arrival,1034,,,1.885,5.746
+all_available_dates,forecast_max_temp_per_5c,Lo Wu,departure,1034,,,1.486,4.780
+all_available_dates,forecast_max_temp_per_5c,Lok Ma Chau Spur Line,arrival,1034,,,1.734,6.552
+all_available_dates,forecast_max_temp_per_5c,Lok Ma Chau Spur Line,departure,1034,,,1.069,5.527
+all_available_dates,forecast_max_temp_per_5c,Shenzhen Bay,arrival,1034,,,2.828,7.428
+all_available_dates,forecast_max_temp_per_5c,Shenzhen Bay,departure,1034,,,1.874,5.944
+all_available_dates,forecast_max_temp_per_5c,All three ports,both,1034,,,1.722,5.814
+exclude_2025_09_24,rain_per_10mm,Lo Wu,arrival,1034,,,-1.351,-1.753
+exclude_2025_09_24,rain_per_10mm,Lo Wu,departure,1034,,,-1.589,-1.837
+exclude_2025_09_24,rain_per_10mm,Lok Ma Chau Spur Line,arrival,1034,,,-1.673,-2.055
+exclude_2025_09_24,rain_per_10mm,Lok Ma Chau Spur Line,departure,1034,,,-1.818,-2.015
+exclude_2025_09_24,rain_per_10mm,Shenzhen Bay,arrival,1034,,,-1.560,-2.187
+exclude_2025_09_24,rain_per_10mm,Shenzhen Bay,departure,1034,,,-1.895,-2.202
+exclude_2025_09_24,rain_per_10mm,All three ports,both,1034,,,-1.622,-1.951
+exclude_2025_09_24,rain_at_least_25mm,Lo Wu,arrival,1034,92,942,-5.850,-8.928
+exclude_2025_09_24,rain_at_least_25mm,Lo Wu,departure,1034,92,942,-6.589,-9.143
+exclude_2025_09_24,rain_at_least_25mm,Lok Ma Chau Spur Line,arrival,1034,92,942,-7.329,-10.555
+exclude_2025_09_24,rain_at_least_25mm,Lok Ma Chau Spur Line,departure,1034,92,942,-7.707,-10.108
+exclude_2025_09_24,rain_at_least_25mm,Shenzhen Bay,arrival,1034,92,942,-6.661,-12.007
+exclude_2025_09_24,rain_at_least_25mm,Shenzhen Bay,departure,1034,92,942,-7.738,-11.284
+exclude_2025_09_24,rain_at_least_25mm,All three ports,both,1034,92,942,-6.875,-10.022
+exclude_2025_09_24,mean_temp_per_5c,Lo Wu,arrival,1034,,,1.663,4.869
+exclude_2025_09_24,mean_temp_per_5c,Lo Wu,departure,1034,,,0.972,2.658
+exclude_2025_09_24,mean_temp_per_5c,Lok Ma Chau Spur Line,arrival,1034,,,1.472,5.680
+exclude_2025_09_24,mean_temp_per_5c,Lok Ma Chau Spur Line,departure,1034,,,0.604,3.601
+exclude_2025_09_24,mean_temp_per_5c,Shenzhen Bay,arrival,1034,,,2.305,6.271
+exclude_2025_09_24,mean_temp_per_5c,Shenzhen Bay,departure,1034,,,1.035,3.132
+exclude_2025_09_24,mean_temp_per_5c,All three ports,both,1034,,,1.264,4.256
+exclude_2025_09_24,target_day_tc8_or_higher,Lo Wu,arrival,1034,10,1024,-36.122,-39.469
+exclude_2025_09_24,target_day_tc8_or_higher,Lo Wu,departure,1034,10,1024,-44.682,-44.862
+exclude_2025_09_24,target_day_tc8_or_higher,Lok Ma Chau Spur Line,arrival,1034,10,1024,-39.726,-42.151
+exclude_2025_09_24,target_day_tc8_or_higher,Lok Ma Chau Spur Line,departure,1034,10,1024,-46.532,-46.498
+exclude_2025_09_24,target_day_tc8_or_higher,Shenzhen Bay,arrival,1034,10,1024,-45.471,-47.684
+exclude_2025_09_24,target_day_tc8_or_higher,Shenzhen Bay,departure,1034,10,1024,-52.954,-51.674
+exclude_2025_09_24,target_day_tc8_or_higher,All three ports,both,1034,10,1024,-42.746,-43.808
+exclude_2025_09_24,target_day_rainstorm_signal,Lo Wu,arrival,1034,114,920,-7.565,-9.283
+exclude_2025_09_24,target_day_rainstorm_signal,Lo Wu,departure,1034,114,920,-6.606,-8.486
+exclude_2025_09_24,target_day_rainstorm_signal,Lok Ma Chau Spur Line,arrival,1034,114,920,-8.734,-10.789
+exclude_2025_09_24,target_day_rainstorm_signal,Lok Ma Chau Spur Line,departure,1034,114,920,-7.689,-9.668
+exclude_2025_09_24,target_day_rainstorm_signal,Shenzhen Bay,arrival,1034,114,920,-8.174,-11.592
+exclude_2025_09_24,target_day_rainstorm_signal,Shenzhen Bay,departure,1034,114,920,-8.023,-10.937
+exclude_2025_09_24,target_day_rainstorm_signal,All three ports,both,1034,114,920,-7.724,-9.853
+exclude_2025_09_24,cutoff_tc3_or_higher,Lo Wu,arrival,1034,18,1016,-13.791,-20.227
+exclude_2025_09_24,cutoff_tc3_or_higher,Lo Wu,departure,1034,18,1016,-24.411,-26.892
+exclude_2025_09_24,cutoff_tc3_or_higher,Lok Ma Chau Spur Line,arrival,1034,18,1016,-17.931,-23.580
+exclude_2025_09_24,cutoff_tc3_or_higher,Lok Ma Chau Spur Line,departure,1034,18,1016,-25.591,-28.325
+exclude_2025_09_24,cutoff_tc3_or_higher,Shenzhen Bay,arrival,1034,18,1016,-22.575,-27.333
+exclude_2025_09_24,cutoff_tc3_or_higher,Shenzhen Bay,departure,1034,18,1016,-31.018,-31.857
+exclude_2025_09_24,cutoff_tc3_or_higher,All three ports,both,1034,18,1016,-21.376,-25.248
+exclude_2025_09_24,cutoff_tc8_or_higher,Lo Wu,arrival,1034,2,1032,-10.763,-3.078
+exclude_2025_09_24,cutoff_tc8_or_higher,Lo Wu,departure,1034,2,1032,-22.268,-11.609
+exclude_2025_09_24,cutoff_tc8_or_higher,Lok Ma Chau Spur Line,arrival,1034,2,1032,-15.605,-4.400
+exclude_2025_09_24,cutoff_tc8_or_higher,Lok Ma Chau Spur Line,departure,1034,2,1032,-23.403,-9.124
+exclude_2025_09_24,cutoff_tc8_or_higher,Shenzhen Bay,arrival,1034,2,1032,-9.824,1.686
+exclude_2025_09_24,cutoff_tc8_or_higher,Shenzhen Bay,departure,1034,2,1032,-23.235,-8.997
+exclude_2025_09_24,cutoff_tc8_or_higher,All three ports,both,1034,2,1032,-18.163,-6.470
+exclude_2025_09_24,cutoff_rainstorm_signal,Lo Wu,arrival,1034,14,1020,-1.838,-3.353
+exclude_2025_09_24,cutoff_rainstorm_signal,Lo Wu,departure,1034,14,1020,2.816,-0.817
+exclude_2025_09_24,cutoff_rainstorm_signal,Lok Ma Chau Spur Line,arrival,1034,14,1020,-2.271,-3.894
+exclude_2025_09_24,cutoff_rainstorm_signal,Lok Ma Chau Spur Line,departure,1034,14,1020,1.455,-1.875
+exclude_2025_09_24,cutoff_rainstorm_signal,Shenzhen Bay,arrival,1034,14,1020,1.213,-3.888
+exclude_2025_09_24,cutoff_rainstorm_signal,Shenzhen Bay,departure,1034,14,1020,7.113,-0.734
+exclude_2025_09_24,cutoff_rainstorm_signal,All three ports,both,1034,14,1020,0.834,-2.722
+exclude_2025_09_24,forecast_psr_medium_high_or_high,Lo Wu,arrival,1033,183,850,-5.257,-9.203
+exclude_2025_09_24,forecast_psr_medium_high_or_high,Lo Wu,departure,1033,183,850,-7.214,-9.548
+exclude_2025_09_24,forecast_psr_medium_high_or_high,Lok Ma Chau Spur Line,arrival,1033,183,850,-6.296,-10.358
+exclude_2025_09_24,forecast_psr_medium_high_or_high,Lok Ma Chau Spur Line,departure,1033,183,850,-7.793,-10.256
+exclude_2025_09_24,forecast_psr_medium_high_or_high,Shenzhen Bay,arrival,1033,183,850,-4.604,-11.021
+exclude_2025_09_24,forecast_psr_medium_high_or_high,Shenzhen Bay,departure,1033,183,850,-7.105,-11.036
+exclude_2025_09_24,forecast_psr_medium_high_or_high,All three ports,both,1033,183,850,-6.506,-10.114
+exclude_2025_09_24,forecast_max_temp_per_5c,Lo Wu,arrival,1033,,,1.916,4.760
+exclude_2025_09_24,forecast_max_temp_per_5c,Lo Wu,departure,1033,,,1.528,3.388
+exclude_2025_09_24,forecast_max_temp_per_5c,Lok Ma Chau Spur Line,arrival,1033,,,1.766,5.533
+exclude_2025_09_24,forecast_max_temp_per_5c,Lok Ma Chau Spur Line,departure,1033,,,1.112,4.088
+exclude_2025_09_24,forecast_max_temp_per_5c,Shenzhen Bay,arrival,1033,,,2.861,6.382
+exclude_2025_09_24,forecast_max_temp_per_5c,Shenzhen Bay,departure,1033,,,1.924,4.319
+exclude_2025_09_24,forecast_max_temp_per_5c,All three ports,both,1033,,,1.758,4.637
